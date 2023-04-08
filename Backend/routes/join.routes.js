@@ -1,6 +1,8 @@
 const express = require("express")
-const { joinValidator } = require("../Middlewares/join.middleware.js")
-const { RoomModel } = require("../models/Room.Model")
+
+
+const { joinValidator } = require("../Middleware/join.middleware")
+const { RoomModel } = require("../Model/Room.Model")
 
 const joinRouter = express.Router()
 
