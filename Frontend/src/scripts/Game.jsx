@@ -349,7 +349,20 @@ export const Game = ({ setScore, setActive }) => {
         }
 
 
-
+        function createBackground() {
+            const gradient = c.createLinearGradient(0, 0, 0, canvas.height)
+            gradient.addColorStop(0.5, 'rgb(33, 181, 239)')
+            gradient.addColorStop(1, 'rgb(34, 139, 34)')
+          
+            c.fillStyle = gradient
+            c.fillRect(0, 0, canvas.width, canvas.height)
+          
+            const bgImage = new Image()
+            bgImage.src = "mango.png"
+            bgImage.onload = function() {
+              c.drawImage(bgImage, 0, 0, canvas.width, canvas.height)
+            }
+          }
         
         
 
@@ -357,15 +370,15 @@ export const Game = ({ setScore, setActive }) => {
             if (!game.active) return
             requestAnimationFrame(animate)
 
-            
+            // createBackground()
 
             
             const gradient = c.createLinearGradient(0, 0, 0, canvas.height)
-            gradient.addColorStop(0, 'white')
-            gradient.addColorStop(0.5, 'rgb(33, 181, 239)')
+            gradient.addColorStop(1, 'white')
+            gradient.addColorStop(0.7, 'rgb(33, 181, 239)')
             gradient.addColorStop(1, "green")
           
-            // Set canvas fill style to the gradient
+            
             c.fillStyle = gradient
             
 

@@ -42,6 +42,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { BASE_URL } from "../constants/config";
 import "./room.css"
+import Payment from "../components/Payment";
 
 const obj = {};
 
@@ -348,6 +349,7 @@ export default function Playpage() {
           >
             Start Match
           </Button>
+          <Button w={"100%"} bg={"yellow.600"}  > <Payment/>  </Button>
 
           <VStack w={FILL_PARENT} position={ABSOLUTE} bottom={10} mt={100}>
             <Flex
