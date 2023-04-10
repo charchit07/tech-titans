@@ -1,1 +1,1 @@
-export const BASE_URL = "https://mango-shooter-game.onrender.com"
+export const BASE_URL = "https://rocket-7qeu.onrender.com/ "
